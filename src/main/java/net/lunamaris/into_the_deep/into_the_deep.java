@@ -35,7 +35,11 @@ public class into_the_deep {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
             event.accept(mod_items.heart_of_the_abyss);
+
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+                event.accept(mod_items.bathysmal_shard);
         }
+      }
     }
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
