@@ -1,6 +1,7 @@
 package net.lunamaris.into_the_deep;
 
 import com.mojang.logging.LogUtils;
+import net.lunamaris.into_the_deep.items.ModCreativeModeTabs;
 import net.lunamaris.into_the_deep.items.mod_items;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -23,8 +24,9 @@ public class into_the_deep {
     public into_the_deep() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        mod_items.Register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
 
+        mod_items.Register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
@@ -33,13 +35,7 @@ public class into_the_deep {
 
     }
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
-            event.accept(mod_items.heart_of_the_abyss);
 
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-                event.accept(mod_items.bathysmal_shard);
-        }
-      }
     }
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
