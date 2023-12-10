@@ -11,7 +11,7 @@ public class mod_items {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, into_the_deep.MOD_ID);
 
-    public static final RegistryObject<Item> HEARTOFTHEABYSS = ITEMS.register("Heart of the Abyss",
+    public static final RegistryObject<Item> heart_of_the_abyss = ITEMS.register("heart_of_the_abyss",
             () -> new Item(new Item.Properties()));
     public static void Register(IEventBus eventBus) {
         ITEMS.register(eventBus);
