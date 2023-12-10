@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "into_the_deep:block/deepslate_bathysmal_ore"
+  }
+}

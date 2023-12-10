@@ -1,6 +1,7 @@
 package net.lunamaris.into_the_deep;
 
 import com.mojang.logging.LogUtils;
+import net.lunamaris.into_the_deep.block.mod_blocks;
 import net.lunamaris.into_the_deep.items.ModCreativeModeTabs;
 import net.lunamaris.into_the_deep.items.mod_items;
 import net.minecraft.client.Minecraft;
@@ -27,6 +28,7 @@ public class into_the_deep {
         ModCreativeModeTabs.register(modEventBus);
 
         mod_items.Register(modEventBus);
+        mod_blocks.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);

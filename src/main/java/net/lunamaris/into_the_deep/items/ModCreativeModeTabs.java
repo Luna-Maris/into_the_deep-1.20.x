@@ -1,5 +1,6 @@
 package net.lunamaris.into_the_deep.items;
 
+import net.lunamaris.into_the_deep.block.mod_blocks;
 import net.lunamaris.into_the_deep.into_the_deep;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -18,6 +19,8 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(mod_items.heart_of_the_abyss.get());
                         output.accept(mod_items.bathysmal_shard.get());
+
+                        output.accept(mod_blocks.DEEPSLATE_BATHYSMAL_ORE.get());
                     })
                     .build());
 
