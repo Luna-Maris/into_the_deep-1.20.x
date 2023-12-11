@@ -21,8 +21,8 @@ public class mod_blocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, into_the_deep.MOD_ID);
 
     public static final RegistryObject<Block> DEEPSLATE_BATHYSMAL_ORE = registerBlock("deepslate_bathysmal_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_LAPIS_ORE)
-                    .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(4,7)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
+                    .strength(4f).requiresCorrectToolForDrops(), UniformInt.of(4,7)));
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
