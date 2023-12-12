@@ -5,7 +5,6 @@ import net.lunamaris.into_the_deep.block.mod_blocks;
 import net.lunamaris.into_the_deep.items.ModCreativeModeTabs;
 import net.lunamaris.into_the_deep.items.mod_items;
 import net.minecraft.client.Minecraft;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
